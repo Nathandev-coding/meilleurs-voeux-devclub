@@ -1,0 +1,164 @@
+.{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    font-family: "Poppins", sans-serif;
+    background:linear-gradient(45deg, #748fe9,#fc25cd);
+    background-size:400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    
+}
+@keyframes gradientAnimation{
+    0%{
+        background-position: 0% 50%:
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#gift-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+}
+lord-icon{
+    position: absolute;
+    animation: float 10s ease-in-out infinite;
+}
+@keyframes float{
+    0%{
+        transform: translateY(-100px) rotate(0deg);
+    }
+    50%{
+        transform: translateY(100vh) rotate(360deg);
+    }
+    100%{
+        transform: translateY(-100px) rotate(0deg);
+    }
+}
+lord-icon:nth-child(1){
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(2){
+    left: 20%;
+    animation-duration: 13s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(3){
+    left: 30%;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(4){
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(5){
+    left: 50%;
+    animation-duration: 16s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(6){
+    left: 60%;
+    animation-duration: 17s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(7){
+    left: 70%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+lord-icon:nth-child(8){
+    left: 80%;
+    animation-duration: 19s;
+    animation-delay: 0s;
+}
+
+.greeting{
+    font: size 2.5rem;
+    margin-bottom: 20px;
+    animation:fadein 3s ease-in-out;
+    color: white
+
+}
+.message{
+    font-size: 1.5rem;
+    max-height: 600px;
+    margin: 0 auto;
+    animation: fadein 4s ease-in-out;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+.message.hide{
+    opacity: 0;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+.card{
+    border: none;
+    background-color: transparent;
+}
+#thanks{
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0;
+    transition: background-color 0.3s,transform 0.2s ease,opacity 1s ease-in-out; 
+}
+#thanks.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+#thanks:hover{
+    background-color: #ffcc00;
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+#photo-container.hidden{
+    display: none;
+}
+#motivation-photo{
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation: fadeinPhoto 8s ease-in-out forwards;
+    border-radius: 30px;
+}
+@keyframes fadeinPhoto{
+    0%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
